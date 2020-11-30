@@ -9,4 +9,4 @@ Random stuff that happens in game
 
 Any content committed to this repository will be irrevocably licensed to pandorabox community by MIT license unless specific license or copyright notes committed with content.
 
-MIT license is permissive (non viral) license with high license compatibility and also allows easy relicensing.
+MIT license is permissive (non viral) license with high license compatibility, very low requirements and allows easy relicensing.
