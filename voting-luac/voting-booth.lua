@@ -4,12 +4,11 @@
 if event.type == "digiline" and event.channel == "config" then
   mem.backup_url = event.msg
 end
-local function encodechar(c)
-        local b = string.byte(c)
+local function encodechar(b)
         if b < 32 or b > 126 then
                 return ""
         elseif (b>47 and b<58)or(b>64 and b<91)or(b>96 and b<123) then
-                return c
+                return string.char(b)
         else
                 return string.format("%%%02X", b)
         end
@@ -17,7 +16,7 @@ end
 local function urlencode(str)
         local res = ""
         for i=1,#str do
-                res = res .. encodechar(str:sub(i,i))
+                res = res .. encodechar(str:byte(i))
         end
         return res
 end
